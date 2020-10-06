@@ -45,6 +45,8 @@
           },
 
           onKey(e) {
+            this.save()
+
             if (e.key === 'Enter') this.toggle()
           },
 
@@ -54,8 +56,19 @@
 
             canvas.toBlob((blob) => saveAs(blob, 'poster.png'))
           },
+
+          save() {
+            localStorage.setItem('heading', this.heading)
+          },
+
+          load() {
+            const data = localStorage.getItem('heading')
+            if (data) this.heading = data
+          },
         },
         created() {
+          this.load()
+
           window.addEventListener('keydown', this.onKey)
         },
       })
