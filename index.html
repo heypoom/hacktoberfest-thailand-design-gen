@@ -20,8 +20,15 @@
 
       <div class="control" :class="{hidden: hideInput}">
         <input type="text" placeholder="Heading Text" v-model="heading" />
+
+        <button class="capture" @click="screenshot">
+          <i class="far fa-camera"></i>
+        </button>
       </div>
     </div>
+
+    <script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://www.unpkg.com/file-saver@2.0.2/dist/FileSaver.min.js"></script>
 
     <script type="module">
       import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.js'
@@ -33,12 +40,20 @@
           toggle() {
             this.hideInput = !this.hideInput
           },
+
+          onKey(e) {
+            if (e.key === 'Enter') this.toggle()
+          },
+
+          async screenshot() {
+            const element = document.querySelector('.backdrop')
+            const canvas = await html2canvas(element)
+
+            canvas.toBlob((blob) => saveAs(blob, 'dashboard.png'))
+          },
         },
         created() {
-          window.addEventListener(
-            'keydown',
-            (e) => e.key === 'Enter' && this.toggle()
-          )
+          window.addEventListener('keydown', this.onKey)
         },
       })
     </script>

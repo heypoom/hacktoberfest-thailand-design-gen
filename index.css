@@ -13,7 +13,8 @@ body {
   background-image: url('./assets/d1.png');
   min-height: 100vh;
   width: 100%;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .backdrop i {
@@ -31,6 +32,10 @@ h1 {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .control input {
@@ -41,6 +46,21 @@ h1 {
   padding: 7px 20px;
   border-radius: 50px;
   width: 30vw;
+}
+
+.control button.capture {
+  background: white;
+  border: none;
+  color: #333;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .hidden {
