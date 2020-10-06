@@ -36,3 +36,7 @@ h1 {
   padding: 7px 20px;
   border-radius: 50px;
 }
+
+.hidden {
+  display: none;
+}

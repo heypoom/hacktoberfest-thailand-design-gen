@@ -18,8 +18,13 @@
         <h1>{{heading}}</h1>
       </div>
 
-      <div class="control">
-        <input type="text" placeholder="Heading Text" v-model="heading" />
+      <div class="control" :class="{hidden: hideInput}">
+        <input
+          type="text"
+          placeholder="Heading Text"
+          v-model="heading"
+          @keyup.enter="hide"
+        />
       </div>
     </div>
 
@@ -28,7 +33,12 @@
 
       const v = new Vue({
         el: '.app',
-        data: {heading: 'Hacktoberfest Heading Here'},
+        data: {heading: 'Hacktoberfest Heading Here', hideInput: false},
+        methods: {
+          hide() {
+            this.hideInput = true
+          },
+        },
       })
     </script>
   </body>
