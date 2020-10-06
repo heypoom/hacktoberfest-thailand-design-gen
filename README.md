@@ -7,7 +7,7 @@ Generates Hacktoberfest Thailand 2020 graphic posters from input HTML and export
 1. Input HTML code in the input box.
 2. Click on the camera icon to save as PNG image.
 
-Tip: The graphics itself is content-editable, so you can click on the text and type on it, and use CTRL+B for bold, CTRL+I for highlight pink and so on.
+> Tip: The graphics itself is content-editable, so you can click on the text and type on it, and use CTRL+B for bold, CTRL+I for highlight pink and so on.
 
 ## Screenshots and Examples
 
