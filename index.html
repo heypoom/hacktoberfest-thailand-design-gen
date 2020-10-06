@@ -34,7 +34,11 @@
 
       const v = new Vue({
         el: '.app',
-        data: {heading: 'Hacktoberfest Heading Here', hideInput: false},
+        data: {
+          heading:
+            'Calling for <br /><span style="font-size: 1.9em"><i>Speakers</i>! </span><span class="far fa-microphone-stand"></span>',
+          hideInput: false,
+        },
         methods: {
           toggle() {
             this.hideInput = !this.hideInput
