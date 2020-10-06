@@ -2,6 +2,8 @@
 
 Generates Hacktoberfest Thailand 2020 graphic posters from input HTML and exports to PNG cuz i'm super lazy.
 
+Link to webapp: https://htbf-th.netlify.app
+
 ## Usage
 
 1. Input HTML code in the input box.
