@@ -10,11 +10,18 @@ body {
 
   color: white;
 
-  background-image: url('./assets/d1.png');
-  min-height: 100vh;
   width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+}
+
+.backdrop img {
+  position: fixed;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
 }
 
 .backdrop i {
