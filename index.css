@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+
+.backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Inter, sans-serif;
+
+  color: white;
+
+  background-image: url('./assets/d1.png');
+  min-height: 100vh;
+  width: 100%;
+  background-size: contain;
+}
+
+h1 {
+  font-size: 2.8em;
+}
