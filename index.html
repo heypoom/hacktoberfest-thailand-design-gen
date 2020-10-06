@@ -15,7 +15,7 @@
   <body contenteditable="true">
     <div class="app">
       <div class="backdrop">
-        <h1>{{heading}}</h1>
+        <h1 v-html="heading"></h1>
       </div>
 
       <div class="control" :class="{hidden: hideInput}">
