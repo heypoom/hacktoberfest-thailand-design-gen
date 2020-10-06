@@ -20,10 +20,10 @@ Calling for <br /><span style="font-size: 1.9em"><i>Speakers</i>! </span
 ><span class="far fa-microphone-stand"></span>
 ```
 
-### Input:
+### Editor UI:
 
 ![Input Screenshot](./docs/input.png)
 
-### Output:
+### Resulting Poster:
 
 ![Input Screenshot](./docs/output.png)
