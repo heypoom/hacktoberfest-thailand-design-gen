@@ -35,11 +35,12 @@ h1 {
 
 .control input {
   font-family: Inter, sans-serif;
-  font-size: 1.3em;
+  font-size: 1em;
   outline: none;
   border: none;
   padding: 7px 20px;
   border-radius: 50px;
+  width: 30vw;
 }
 
 .hidden {
