@@ -15,7 +15,11 @@
   <body>
     <div class="app">
       <div class="backdrop">
-        <h1>{{text}}</h1>
+        <h1>{{heading}}</h1>
+      </div>
+
+      <div class="control">
+        <input type="text" placeholder="Heading Text" v-model="heading" />
       </div>
     </div>
 
@@ -24,7 +28,7 @@
 
       const v = new Vue({
         el: '.app',
-        data: {text: 'Hacktoberfest Heading Here'},
+        data: {heading: 'Hacktoberfest Heading Here'},
       })
     </script>
   </body>
