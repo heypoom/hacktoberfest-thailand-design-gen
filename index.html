@@ -14,7 +14,7 @@
   </head>
   <body>
     <div class="app">
-      <div class="backdrop" contenteditable="true">
+      <div class="backdrop" :contenteditable="hideInput ? 'false' : 'true'">
         <h1 v-html="heading"></h1>
       </div>
 
