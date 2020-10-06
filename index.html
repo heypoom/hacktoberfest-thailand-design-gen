@@ -13,12 +13,19 @@
     />
   </head>
   <body>
-    <div class="backdrop">
-      <h1>Some Text Here</h1>
+    <div class="app">
+      <div class="backdrop">
+        <h1>{{text}}</h1>
+      </div>
     </div>
 
     <script type="module">
       import Vue from 'https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.js'
+
+      const v = new Vue({
+        el: '.app',
+        data: {text: 'Hacktoberfest Heading Here'},
+      })
     </script>
   </body>
 </html>
