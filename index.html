@@ -19,12 +19,7 @@
       </div>
 
       <div class="control" :class="{hidden: hideInput}">
-        <input
-          type="text"
-          placeholder="Heading Text"
-          v-model="heading"
-          @keyup.enter="hide"
-        />
+        <input type="text" placeholder="Heading Text" v-model="heading" />
       </div>
     </div>
 
@@ -35,9 +30,15 @@
         el: '.app',
         data: {heading: 'Hacktoberfest Heading Here', hideInput: false},
         methods: {
-          hide() {
-            this.hideInput = true
+          toggle() {
+            this.hideInput = !this.hideInput
           },
+        },
+        created() {
+          window.addEventListener(
+            'keydown',
+            (e) => e.key === 'Enter' && this.toggle()
+          )
         },
       })
     </script>
