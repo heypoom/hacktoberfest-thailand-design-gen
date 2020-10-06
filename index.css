@@ -16,8 +16,13 @@ body {
   background-size: contain;
 }
 
+.backdrop i {
+  font-style: normal;
+  color: #ff8ae2;
+}
+
 h1 {
-  font-size: 2.8em;
+  font-size: 4em;
 }
 
 .control {
