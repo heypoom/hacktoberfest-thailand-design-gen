@@ -14,13 +14,17 @@
   </head>
   <body>
     <div class="app">
+
       <div class="backdrop">
-        <img src="./assets/d1.png" />
+        <img v-if="urlImage" :src="urlImage" />
 
         <h1 v-html="heading" :contenteditable="hideInput ? 'false' : 'true'"></h1>
       </div>
 
       <div class="control" :class="{hidden: hideInput}">
+        <input type="file" id="file-backdrop" @change="previewFiles" />
+        <label for="file-backdrop" class="btn-upload"><i class="far fa-image"></i></label>
+
         <input type="text" placeholder="Heading Text" v-model="heading" />
 
         <button class="capture" @click="screenshot">
@@ -35,6 +39,7 @@
       const v = new Vue({
         el: '.app',
         data: {
+          urlImage: './assets/d1.png',
           heading:
             'Calling for <br /><span style="font-size: 1.9em"><i>Speakers</i>! </span><span class="far fa-microphone-stand"></span>',
           hideInput: false,
@@ -52,7 +57,7 @@
 
           async screenshot() {
             const element = document.querySelector('.backdrop')
-            const canvas = await html2canvas(element)
+            const canvas = await html2canvas(element, {useCORS: true})
 
             canvas.toBlob((blob) => saveAs(blob, 'poster.png'))
           },
@@ -65,6 +70,10 @@
             const data = localStorage.getItem('heading')
             if (data) this.heading = data
           },
+          previewFiles(event) {
+            const file = event.target.files[0];
+            this.urlImage = URL.createObjectURL(file);
+          }
         },
         created() {
           this.load()
