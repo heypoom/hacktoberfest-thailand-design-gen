@@ -6,7 +6,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Inter, sans-serif;
+  font-family: Inter, Sukhumvit Set, sans-serif;
 
   color: white;
 
@@ -69,7 +69,6 @@ h1 {
   justify-content: center;
   cursor: pointer;
   outline: none;
-  
 }
 
 .btn-upload {
