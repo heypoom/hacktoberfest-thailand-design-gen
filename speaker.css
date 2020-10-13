@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+}
+
+.backdrop {
+  font-family: Inter, Sukhumvit Set, sans-serif;
+
+  color: white;
+  position: relative;
+  margin: 0 auto 200px;
+  width: 1080px;
+  height: 1080px;
+  background: url(./speaker.svg) no-repeat;
+  background-size: cover;
+}
+
+.speaker-card {
+  position: absolute;
+  top: 208px;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.speaker-image {
+  --size: 448px;
+  width: var(--size);
+  height: var(--size);
+  overflow: hidden;
+  border-radius: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  top: 16px;
+}
+
+.speaker-label {
+  margin-top: 44px;
+  background: #914B67;
+  font-size: 24px;
+  padding: 3px 8px;
+  border-radius: 8px;
+}
+
+.speaker-title {
+  margin-top: 16px;
+  font-size: 45px;
+  text-align: center;
+  padding: 0 2rem;
+  line-height: 48px;
+  color: #0F253E;
+}
+
+.speaker-name {
+  color: #914B67;
+  font-size: 26px;
+  text-align: center;
+  margin-top: 16px;
+  line-height: 27px;
+}
+
+.backdrop i {
+  font-style: normal;
+  color: #ff8ae2;
+}
+
+h1 {
+  font-size: 5.5em;
+}
+
+.control {
+  z-index: 10;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control input {
+  font-family: Inter, sans-serif;
+  font-size: 1em;
+  outline: none;
+  border: none;
+  padding: 7px 20px;
+  border-radius: 50px;
+  width: 30vw;
+  display: block;
+}
+
+.control button.capture {
+  background: white;
+  border: none;
+  color: #333;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn-upload {
+  background: white;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+#file-backdrop {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
