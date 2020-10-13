@@ -35,6 +35,10 @@ h1 {
   font-size: 5.5em;
 }
 
+h1.content {
+  max-width: 950px;
+}
+
 .control {
   z-index: 10;
   position: fixed;

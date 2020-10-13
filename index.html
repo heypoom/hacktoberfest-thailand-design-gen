@@ -20,7 +20,11 @@
         :class="{ 'is-square': isSquare }"
         :style="{ backgroundImage: `url(${urlImage})`}">
 
-        <h1 v-html="heading" :contenteditable="hideInput ? 'false' : 'true'"></h1>
+        <h1
+          v-html="heading"
+          class="content"
+          :contenteditable="hideInput ? 'false' : 'true'">
+        </h1>
       </div>
 
       <div class="control" :class="{hidden: hideInput}">
