@@ -15,15 +15,25 @@
   <body>
     <div class="app">
 
-      <div class="backdrop">
-        <img v-if="urlImage" :src="urlImage" />
+      <div
+        class="backdrop"
+        :class="{ 'is-square': isSquare }"
+        :style="{ backgroundImage: `url(${urlImage})`}">
 
         <h1 v-html="heading" :contenteditable="hideInput ? 'false' : 'true'"></h1>
       </div>
 
       <div class="control" :class="{hidden: hideInput}">
         <input type="file" id="file-backdrop" @change="previewFiles" />
-        <label for="file-backdrop" class="btn-upload"><i class="far fa-image"></i></label>
+        <label for="file-backdrop" class="btn-upload">
+          <i class="far fa-image"></i>
+        </label>
+
+        <button
+          class="capture"
+          @click="toggleIsSquare">
+          <i class="fas fa-vector-square"></i>
+        </button>
 
         <input type="text" placeholder="Heading Text" v-model="heading" />
 
@@ -39,10 +49,19 @@
       const v = new Vue({
         el: '.app',
         data: {
-          urlImage: './assets/d1.png',
           heading:
             'Calling for <br /><span style="font-size: 1.9em"><i>Speakers</i>! </span><span class="far fa-microphone-stand"></span>',
           hideInput: false,
+          isSquare: false,
+        },
+        computed: {
+          urlImage () {
+            if (this.isSquare) {
+              return './assets/square-bg.jpg'
+            }
+
+            return './assets/d1.png'
+          }
         },
         methods: {
           toggle() {
@@ -73,6 +92,9 @@
           previewFiles(event) {
             const file = event.target.files[0];
             this.urlImage = URL.createObjectURL(file);
+          },
+          toggleIsSquare () {
+            this.isSquare = !this.isSquare
           }
         },
         created() {
