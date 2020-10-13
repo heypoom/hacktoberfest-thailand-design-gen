@@ -79,6 +79,7 @@
           },
 
           async screenshot() {
+            window.scrollTo(0, 0)
             const element = document.querySelector('.backdrop')
             const canvas = await html2canvas(element, {useCORS: true})
 
