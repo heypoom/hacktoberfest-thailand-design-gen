@@ -69,7 +69,6 @@ h1.content {
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  margin-left: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,4 +96,12 @@ h1.content {
 
 .hidden {
   display: none;
+}
+
+.ml-15px {
+  margin-left: 15px;
+}
+
+.mr-15px {
+  margin-right: 15px;
 }
