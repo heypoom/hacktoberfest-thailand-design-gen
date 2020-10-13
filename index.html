@@ -27,7 +27,7 @@
         </h1>
       </div>
 
-      <div class="control" :class="{hidden: hideInput}">
+      <div class="control">
         <input type="file" id="file-backdrop" @change="previewFiles" />
         <label for="file-backdrop" class="btn-upload">
           <i class="far fa-image"></i>
@@ -68,14 +68,14 @@
           }
         },
         methods: {
-          toggle() {
+          toggleInput() {
             this.hideInput = !this.hideInput
           },
 
           onKey(e) {
             this.save()
 
-            if (e.key === 'Enter') this.toggle()
+            if (e.key === 'Enter') this.toggleInput()
           },
 
           async screenshot() {
