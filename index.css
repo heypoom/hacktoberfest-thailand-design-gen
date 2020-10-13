@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+.app {
+  background-color: rgba(13, 37, 63, .7);
+}
+
 .backdrop {
   display: flex;
   align-items: center;
